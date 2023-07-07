@@ -1,9 +1,9 @@
 # AutoLegalTracker-Web
 
 This is the Vite/React project for the AutoLegalTracker front end.  
-Staging: https://zippy-squirrel-6a1b92.netlify.app/
+Staging: https://zippy-squirrel-6a1b92.netlify.app/  
 
-Requirements:
+# Requirements:
 - Node Package Manager >= 17.4.0
 
 ## Installation
