@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import { useGoogleLogin } from '@react-oauth/google'
 import axios from 'axios';
+const host = import.meta.env.VITE_TOKEN_EXCHANGE_SERVER_URL;
 
 function App() {
   const login = useGoogleLogin({
@@ -15,9 +16,8 @@ function App() {
 
   const exchangeCode = async (oneTimeToken) => {
     console.log(oneTimeToken);
-    const tokens = await axios.post(import.meta.env.dev 
-        ? import.meta.env.VITE_TOKEN_EXCHANGE_SERVER_URL_DEV
-        : import.meta.env.VITE_TOKEN_EXCHANGE_SERVER_URL, 
+    const tokens = await axios.post(
+      (host+"/User/login"), 
         {  
             oneTimeToken,
         });
