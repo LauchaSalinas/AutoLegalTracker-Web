@@ -11,6 +11,7 @@ function App() {
         exchangeCode(tokenResponse.code);
     },
     onFailure: error => console.log(error),
+    // indicate google to use the auth-code flow for server side exchange
     flow: 'auth-code',
   });
 
