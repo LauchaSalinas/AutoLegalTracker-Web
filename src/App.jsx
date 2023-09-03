@@ -26,12 +26,14 @@ function App() {
     console.log(tokens);
   }
   return (
-    <div id='divLogin'>
-      <h2>Auto Legal Tracker Login</h2>
-      <br />
-      <button onClick={() => login()}>
-        Sign in with Google 🚀{' '}
-      </button>
+    <div className='flex justify-center h-screen w-full items-center flex-col bg-textColor' id='divLogin'>
+
+      <h2 className='text-white'>Auto Legal Tracker Login</h2>
+
+      <button 
+        className='my-[25px] font-bold text-white '
+        onClick={() => login()}
+      >Sign in with Google 🚀{' '}</button>
     </div>
   )
 }
