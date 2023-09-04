@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import notificationData from '../debug/axiosData';
+import notificationData from '../../debug/axiosData';
 import AccordionItem from "./AccordionItem";
 
 const Accordion = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
-import Accordion from '../components/Accordion'
-import Layout from '../components/Layout'
-import Breadcrumb from '../components/Breadcrumb'
+import Accordion from '../../components/Dashboard/Accordion'
+import Layout from './DashboardLayout'
+import Breadcrumb from '../../components/Dashboard/Breadcrumb'
 
 const Cases = () => {
   return (

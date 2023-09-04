@@ -1,40 +1,10 @@
 import React from 'react'
+import RoutesConfig from './routes/RoutesConfig'
 import './App.css'
-import { useGoogleLogin } from '@react-oauth/google'
-import axios from 'axios';
-const host = import.meta.env.VITE_TOKEN_EXCHANGE_SERVER_URL;
 
 function App() {
-  const login = useGoogleLogin({
-    onSuccess: tokenResponse => {
-        // send tokenResponse.code to your backend to get access token
-        exchangeCode(tokenResponse.code);
-    },
-    onFailure: error => console.log(error),
-    // indicate google to use the auth-code flow for server side exchange
-    flow: 'auth-code',
-  });
-
-  const exchangeCode = async (oneTimeToken) => {
-    console.log(oneTimeToken);
-    const tokens = await axios.post(
-      (host+"/User/login"), 
-        {  
-            oneTimeToken,
-        });
-
-    console.log(tokens);
-  }
   return (
-    <div className='flex justify-center h-screen w-full items-center flex-col bg-textColor' id='divLogin'>
-
-      <h2 className='text-white'>Auto Legal Tracker Login</h2>
-
-      <button 
-        className='my-[25px] font-bold text-white '
-        onClick={() => login()}
-      >Sign in with Google 🚀{' '}</button>
-    </div>
+    <RoutesConfig />
   )
 }
 

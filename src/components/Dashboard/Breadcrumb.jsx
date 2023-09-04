@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import capitalizeFirstLetter from '../utilities/capitalizeFirstLetter';
+import capitalizeFirstLetter from '../../utilities/capitalizeFirstLetter'
 
 const Breadcrumb = () => {
     let currentLink = '';

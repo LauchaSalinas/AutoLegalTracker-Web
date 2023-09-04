@@ -1,24 +1,41 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 //importing components
-import Cases from '../pages/Cases'
-import Dashboard from '../pages/Dashboard'
+import Cases from '../pages/Dashboard/Cases'
+import Dashboard from '../pages/Dashboard/HomeDashboard'
+import Home from '../pages/Landing/Home'
+import Plans from '../pages/Landing/Plans'
+import AboutUs from '../pages/Landing/AboutUs'
+import Login from '../components/LandingPage/Login'
 
 const RoutesConfig = () => {
   return (
     <>
     {/* Routes */}
     <Routes>
-        {/* Dashboard Path */}
+        {/* Landing Paths */}
+        <Route className='transition ease-in-out delay-50 hover:text-white' 
+            path='/' 
+            element={<Home/>}
+        />
+        <Route className='transition ease-in-out delay-50 hover:text-white' 
+            path='/planes' 
+            element={<Plans/>}
+        />
+        <Route className='transition ease-in-out delay-50 hover:text-white' 
+            path='/nosotros' 
+            element={<AboutUs/>}
+        />
+
+        {/* Dashboard Paths */}
         <Route 
             className='transition ease-in-out delay-50 hover:text-white' 
-            path='/' 
+            path='/dashboard' 
             element={<Dashboard/>}
         />
-        {/* Cases Path */}
         <Route 
             className='transition ease-in-out delay-50 hover:text-white' 
-            path='/casos' 
+            path='/dashboard/casos' 
             element={<Cases/>}
         />
     </Routes>
