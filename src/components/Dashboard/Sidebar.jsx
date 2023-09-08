@@ -7,7 +7,7 @@ const Sidebar = () => {
       <div>
           <Link to='/dashboard' className='text-2xl font-bold text-white'>AUTO LEGAL TRACKER</Link>             
       </div>
-      <div className='flex items-center text-white text-left h-full w-full text-opacity-50'>
+      <div className='h-full w-full flex items-center text-white text-left text-opacity-50'>
         <ul className='flex flex-col text-xl'>
           <Link to="/dashboard/casos" className='transition ease-in-out delay-50 hover:text-white'>Casos</Link>
           <Link to="#" className='transition ease-in-out delay-50 hover:text-white'>Notificaciones</Link>

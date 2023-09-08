@@ -4,11 +4,11 @@ import Footer from '../../components/LandingPage/Footer'
 
 const Layout = ({ children }) => {
     return (
-        <>
+        <div className='h-screen'>
         <Header />
-        {children}
+            {children}
         <Footer />
-        </>
+        </div>
     )
 }
 

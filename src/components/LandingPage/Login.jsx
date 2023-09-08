@@ -40,8 +40,6 @@ const [userInfo, setUserInfo] = React.useState({
 })
 
 // use the react hook to get the user info
-
-
 const getUserInfo = async () => {
   const response = await axios.get(
     (host+"/User/Info"),
@@ -58,37 +56,36 @@ const getUserInfo = async () => {
 //#endregion
 
 //#region logout
-  const logout = async () => {
-    const response = await axios.post(
-      (host+"/User/logout"),
-      {},
-      {
-        withCredentials: true
-      }
-    );
-    console.log(response);
-  }
+const logout = async () => {
+  const response = await axios.post(
+    (host+"/User/logout"),
+    {},
+    {
+      withCredentials: true
+    }
+  );
+  console.log(response);
+}
 //#endregion
 
-
-
-  return (
-    <div id='divLogin'>
-      <h2>Auto Legal Tracker Login</h2>
-      <br />
-      <button onClick={() => login()}>
-        Sign in with Google 🚀{' '}
-      </button>
-      <button onClick={() => getUserInfo()}>
-        Get User info{' '}
-      </button>
-      <h2>{userInfo.name}</h2>
-      <img style={{margin: '15px'}} src={userInfo.imgUrl} />
-      <button onClick={() => logout()}>
-        Logout ❌{' '}
-      </button>
-    </div>
-  )
+return (
+  <div className='bg-white text-black font-semibold border-[3px] border-white rounded hover:bg-transparent hover:text-white duration-75' id='divLogin'>
+    <button 
+      className='p-1.5 text-sm'
+      onClick={() => login()}
+    >
+      Sign in with Google 🚀{' '}
+    </button>
+    <button onClick={() => getUserInfo()}>
+      Get User info{' '}
+    </button>
+    <h2>{userInfo.name}</h2>
+    <img style={{margin: '15px'}} src={userInfo.imgUrl} />
+    <button onClick={() => logout()}>
+      Logout ❌{' '}
+    </button>
+  </div>
+)
 }
 
 export default Login

@@ -6,7 +6,6 @@ import Dashboard from '../pages/Dashboard/HomeDashboard'
 import Home from '../pages/Landing/Home'
 import Plans from '../pages/Landing/Plans'
 import AboutUs from '../pages/Landing/AboutUs'
-import Login from '../components/LandingPage/Login'
 
 const RoutesConfig = () => {
   return (
